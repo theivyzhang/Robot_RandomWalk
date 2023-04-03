@@ -3,7 +3,7 @@ A simple simulation of a vacuum robot.
 This is an Apple Silicon adaptation for running ROS and robotic software. 
 Before following the next two steps, install Docker ([installation instructions for Mac](https://docs.docker.com/docker-for-mac/install/).
 
-## 1. Setup
+## 1. Setup Docker
 1. Open a terminal and clone this repository with the command `git clone https://github.com/jaismith/ros-apple-silicon`
 2. Enter in the cloned repository folder, `cd ros-apple-silicon`
 3. Run `docker-compose up --build`
@@ -20,11 +20,10 @@ open another terminal:
 1. Run `docker-compose exec ros bash` (`docker-compose up` has to be running)
 2. Run `source /opt/ros/melodic/setup.bash`
 3. To make the simulation less computationally expensive on your computer, you can run the 2D simulation we have seen in class. To install it, you can run `apt install ros-melodic-nav2d-tutorials`. 
-4. After running `roscore`, here is the command to start the simulation: `rosrun stage_ros stageros /opt/ros/melodic/share/nav2d_tutorials/world/tutorial.world`.
-
-To see whether it was successful, 
+4. After running `roscore`, here is the command to start the simulation: `rosrun stage_ros stageros /opt/ros/melodic/share/nav2d_tutorials/world/tutorial.world`. To see whether it was successful, 
 5. Open your browser to `localhost:8080/vnc.html` and click connect.
-6. The robotic simulator is now running in your browser.
+6. In another terminal, do the above steps and run `python <file name>` where "file name" is the name of my python file on your computer.
+7. The robotic simulator is now running in your browser.
 
 ## 3. To terminate
 
