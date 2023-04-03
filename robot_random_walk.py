@@ -2,7 +2,6 @@
 #The line above is important so that this file is interpreted with Python when running it.
 
 # Author: Ivy Aiwei Zhang
-# worked with Aamish, Luis (Hongke), Carlos, and Dara (auditor)
 # Date: March 29th 2023
 
 # Import of python modules.
@@ -74,7 +73,6 @@ class RandomWalk():
         
         if not self._close_obstacle:
             # Please double check the LaserScan message http://docs.ros.org/en/melodic/api/sensor_msgs/html/msg/LaserScan.html
-            ####### TODO: ANSWER CODE BEGIN #######
             # Find the minimum range value between min_scan_angle and max_scan_angle
             min_range = msg.ranges[0]
             assert self.min_threshold_distance < msg.range_max
@@ -87,7 +85,6 @@ class RandomWalk():
             if min_range is not None and min_range < self.min_threshold_distance:
                 self._close_obstacle = True
 
-            ####### ANSWER CODE END #######
 
     def spin(self):
         rate = rospy.Rate(FREQUENCY) # loop at 10 Hz.
@@ -99,7 +96,6 @@ class RandomWalk():
             # after which the flag is set again to False.
             # Use the function move already implemented, passing the default velocities saved in the corresponding class members.
 
-            ####### TODO: ANSWER CODE BEGIN #######
             if not self._close_obstacle:
                 self.move(LINEAR_VELOCITY, 0)
             else:
