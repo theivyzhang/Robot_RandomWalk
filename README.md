@@ -10,7 +10,7 @@ Before following the next two steps, install Docker ([installation instructions 
 
 (`ros.env` contains environment variables for ROS that can be modified before running the command in step 3.)
 
-## 2. Running a ROS gazebo simulation for testing
+## 2. Running a ROS gazebo simulation for testing the 
 Once the other terminal shows the following type of messages 
 
     Starting ros-apple-silicon_novnc_1 ... done
@@ -19,7 +19,8 @@ Once the other terminal shows the following type of messages
 open another terminal:
 1. Run `docker-compose exec ros bash` (`docker-compose up` has to be running)
 2. Run `source /opt/ros/melodic/setup.bash`
-3. Run `roslaunch turtlebot3_gazebo turtlebot3_world.launch` and you should see a number of messages, including `[ INFO] [1617035063.438483400, 0.126000000]: DiffDrive(ns = //): Advertise odom on odom `
+3. To make the simulation less computationally expensive on your computer, you can run the 2D simulation we have seen in class. To install it, you can run `apt install ros-melodic-nav2d-tutorials`. 
+4. After running `roscore`, here is the command to start the simulation: `rosrun stage_ros stageros /opt/ros/melodic/share/nav2d_tutorials/world/tutorial.world`.
 
 To see whether it was successful, 
 5. Open your browser to `localhost:8080/vnc.html` and click connect.
